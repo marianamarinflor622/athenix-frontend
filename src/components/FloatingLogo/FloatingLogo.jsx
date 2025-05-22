@@ -11,6 +11,7 @@ export default function FloatingLogo() {
       className={styles.logo}
       animate={{ y: [0, -20, 0] }}
       transition={{ duration: 2, repeat: Infinity }}
+      style={{ position: 'fixed', top: 20, right: 20 }}
     />
   );
 }
