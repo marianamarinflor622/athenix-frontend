@@ -1,0 +1,1 @@
+import stylkes from './AdminPanel.module.css';

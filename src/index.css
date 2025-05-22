@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexie+Readable&display=swap');
+
+:root {
+  /* Pastel Color Palette */
+  --color-1: #ffffcc;
+  --color-2: #ffcc99;
+  --color-3: #ffcccc;
+  --color-4: #ff99cc;
+  --color-5: #ffccff;
+  --color-6: #cc99ff;
+  --color-7: #ccccff;
+  --color-8: #99ccff;
+  --color-9: #ccffff;
+  --color-10: #99ffcc;
+  --color-11: #ccffcc;
+  --color-12: #ccff99;
+
+  /* Typography */
+  --font-primary: 'Lexie Readable', cursive;
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-1);
+  color: #333;
+}
