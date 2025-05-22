@@ -1,17 +1,17 @@
 .button {
-    position: fixed;
-    bottom: 2rem; right: 2rem;
-    padding: 0.75rem 1.25rem;
-    background-color: var(--color-10);
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-  }
-  .button:hover {
-    background-color: var(--color-11);
-  }
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: var(--color-4);
+  color: #000;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: var(--font-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--color-5);
+}

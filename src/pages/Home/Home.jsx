@@ -1,22 +1,26 @@
 import React from 'react';
-import styles from './Home.module.css';
 import { motion } from 'framer-motion';
-import FloatingLogo from '../../components/FloatingLogo/FloatingLogo';
+import styles from './Home.module.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <FloatingLogo />
-
-      <motion.div
-        className={styles.welcome}
+      <motion.h1
+        className={styles.title}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
       >
-        <h1>Bienvenidos a Athenyx</h1>
-        <p>Diseño web inclusivo y educación tecnológica en tiempo real.</p>
-      </motion.div>
+        Bienvenidos a Athenyx
+      </motion.h1>
+      <motion.p
+        className={styles.subtitle}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
+        Diseño web inclusivo y educación tecnológica en tiempo real.
+      </motion.p>
     </div>
   );
-}
+}  

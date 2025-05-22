@@ -1,13 +1,29 @@
 .sidebar {
   position: fixed;
-  top: 0; left: 0;
-  width: 200px; height: 100vh;
-  background-color: var(--color-2);
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  display: flex; flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: var(--color-1);
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+  font-family: var(--font-primary);
+  overflow-y: auto;
 }
-.active {
+
+.sidebar a {
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: var(--color-2);
+}
+
+.sidebar .active {
   font-weight: bold;
-  color: var(--color-6);
+  color: var(--color-3);
 }
