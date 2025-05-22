@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <FloatingLogo />
+
       <motion.div
         className={styles.welcome}
         initial={{ opacity: 0, y: 50 }}
@@ -18,4 +19,4 @@ export default function Home() {
       </motion.div>
     </div>
   );
-} 
+}
