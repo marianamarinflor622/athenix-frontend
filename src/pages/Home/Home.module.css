@@ -16,7 +16,7 @@
   width: 80%;
   margin-bottom: 2rem;
   animation: blurIn 1.2s ease-out forwards;
-  filter: blur(20px); /* estado inicial forzado */
+  filter: blur(20px); 
 }
 .container {
   background-color: var(--color-bg);

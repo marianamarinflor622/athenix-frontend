@@ -1,8 +1,8 @@
 .section {
     min-height: 100vh;
     padding: 4rem 2rem;
-    scroll-margin-top: 2rem; /* para compensar el sidebar */
-    background-color: #fff;  /* secciones blanco o negro según cada página */
+    scroll-margin-top: 2rem; 
+    background-color: #fff;  
     color: #000;
   }
   

@@ -1,7 +1,7 @@
 .container {
     min-height: 100vh;
-    background-color: var(--color-bg);         /* negro elegante */
-    color: var(--color-text-light);            /* texto claro */
+    background-color: var(--color-bg);         
+    color: var(--color-text-light);            
     padding: 4rem 2rem;
   }
   

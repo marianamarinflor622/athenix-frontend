@@ -1,9 +1,9 @@
-// src/pages/AdminPanel/AdminPanel.jsx
+
 import React, { useState } from 'react';
 import styles from './AdminPanel.module.css';
 import { uploadResource } from '../../api/services';
 
-// Sanitización básica
+
 function sanitize(input) {
   return input.replace(/[<>"'`;]/g, '');
 }

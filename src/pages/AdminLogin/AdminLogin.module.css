@@ -1,7 +1,6 @@
 .container {
   min-height: 100vh;
-  background-color: var(--color-bg); /* fondo negro elegante */
-  color: var(--color-text-light);
+  background-color: var(--color-bg); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +9,7 @@
 }
 
 .card {
-  background-color: #1A1A1A; /* gris muy oscuro */
+  background-color: #1A1A1A; 
   padding: 3rem 2rem;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);

@@ -1,6 +1,6 @@
 .container {
     min-height: 100vh;
-    background-color: var(--color-bg); /* negro elegante */
+    background-color: var(--color-bg); 
     color: var(--color-text-light);
     padding: 4rem 2rem;
     display: flex;
@@ -24,7 +24,7 @@
   
   .card {
     background-color: #1A1A1A;
-    border: 1px solid rgba(183, 110, 121, 0.2); /* borde rose gold sutil */
+    border: 1px solid rgba(183, 110, 121, 0.2); 
     border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     padding: 2rem;

@@ -2,26 +2,26 @@
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
-    color: var(--color-text-light); /* blanco o champán claro */
+    color: var(--color-text-light); 
     font-weight: bold;
   }
   
-  /* Contenedor de botones con mejor separación */
+ 
   .filters {
     display: flex;
-    gap: 1.5rem;             /* más espacio entre botones */
+    gap: 1.5rem;            
     justify-content: center;
-    margin-bottom: 3rem;     /* mayor espacio con la galería */
+    margin-bottom: 3rem;     
     flex-wrap: wrap;
   }
   
-  /* Botones accesibles, elegantes y suaves */
+  
   .filters button,
   .commentBtn,
   .downloadBtn {
-    background-color: rgba(255, 255, 255, 0.1); /* fondo translúcido */
-    color: var(--color-text-light);             /* texto claro */
-    border: 1px solid var(--color-hover);       /* borde cobre oscuro */
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: var(--color-text-light);            
+    border: 1px solid var(--color-hover);      
     padding: 0.8rem 1.6rem;
     font-size: 1rem;
     font-weight: 600;
@@ -31,20 +31,19 @@
     min-width: 140px;
   }
   
-  /* Hover: elegante pero con más contraste */
   .filters button:hover,
   .commentBtn:hover,
   .downloadBtn:hover {
-    background-color: var(--color-hover);       /* rose dark */
+    background-color: var(--color-hover);       
     color: #fff;
-    border-color: var(--color-accent);          /* rose gold claro */
+    border-color: var(--color-accent);         
   }
   
-  /* Enfoque accesible */
+
   .filters button:focus,
   .commentBtn:focus,
   .downloadBtn:focus {
-    outline: 3px solid var(--color-pale);       /* rosa palo claro */
+    outline: 3px solid var(--color-pale);       
     outline-offset: 3px;
   }
   

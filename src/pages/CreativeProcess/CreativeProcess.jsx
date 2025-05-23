@@ -90,7 +90,7 @@ export default function CreativeProcess() {
             />
           )}
 
-          {/* Botón de descarga */}
+          
           <a
             href={`http://localhost:8080/api/resources/download/${selected.resourceName}`}
             download
