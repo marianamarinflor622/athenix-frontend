@@ -1,6 +1,7 @@
+// src/pages/AdminPanel/AdminPanel.jsx
 import React, { useState } from 'react';
 import styles from './AdminPanel.module.css';
-import { uploadResource } from '../../api/services'; // ✅ Importación corregida
+import { uploadResource } from '../../api/services';
 
 // Sanitización básica
 function sanitize(input) {
@@ -45,48 +46,50 @@ export default function AdminPanel() {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Panel de Administradora</h2>
-      {message && <p className={styles.message}>{message}</p>}
+      <div className={styles.card}>
+        <h2 className={styles.title}>Panel de Administradora</h2>
+        {message && <p className={styles.message}>{message}</p>}
 
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Título"
-          value={title}
-          onChange={e => setTitle(sanitize(e.target.value))}
-          className={styles.input}
-          required
-        />
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Título"
+            value={title}
+            onChange={e => setTitle(sanitize(e.target.value))}
+            className={styles.input}
+            required
+          />
 
-        <textarea
-          placeholder="Descripción"
-          value={description}
-          onChange={e => setDescription(sanitize(e.target.value))}
-          className={styles.textarea}
-          required
-        />
+          <textarea
+            placeholder="Descripción"
+            value={description}
+            onChange={e => setDescription(sanitize(e.target.value))}
+            className={styles.textarea}
+            required
+          />
 
-        <select
-          value={type}
-          onChange={e => setType(e.target.value)}
-          className={styles.select}
-        >
-          <option value="Web">Web</option>
-          <option value="Lab">Lab</option>
-        </select>
+          <select
+            value={type}
+            onChange={e => setType(e.target.value)}
+            className={styles.select}
+          >
+            <option value="Web">Web</option>
+            <option value="Lab">Lab</option>
+          </select>
 
-        <input
-          type="file"
-          accept="image/*,video/*"
-          onChange={e => setFile(e.target.files[0])}
-          className={styles.input}
-          required
-        />
+          <input
+            type="file"
+            accept="image/*,video/*"
+            onChange={e => setFile(e.target.files[0])}
+            className={styles.input}
+            required
+          />
 
-        <button type="submit" className={styles.button}>
-          Subir
-        </button>
-      </form>
+          <button type="submit" className={styles.button}>
+            Subir
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

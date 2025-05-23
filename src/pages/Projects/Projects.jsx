@@ -5,11 +5,10 @@ import useInfiniteScroll from '../../hooks/useInfiniteScroll';
 
 // Rutas relativas desde la carpeta public/images/
 const allImages = [
-  { id: 1, url: '/images/Imagen.jpeg', title: 'Imagen 1' },
-  { id: 2, url: '/images/Imagen 2.jpeg', title: 'Imagen 2' },
-  { id: 3, url: '/images/Imagen 3.jpeg', title: 'Imagen 3' },
-  { id: 4, url: '/images/Imagen 4.jpeg', title: 'Imagen 4' },
-  { id: 5, url: '/images/Imagen 5.jpeg', title: 'Imagen 5' },
+  { id: 2, url: '/images/Imagen 2.jpeg', title: 'NeuroGoods 2' },
+  { id: 3, url: '/images/Imagen 3.jpeg', title: 'NeuroGoods 3' },
+  { id: 4, url: '/images/Imagen 4.jpeg', title: 'NeuroGoods 4' },
+  { id: 5, url: '/images/Imagen 5.jpeg', title: 'NeuroGoods 5' },
 ];
 
 const PAGE_SIZE = 3;
@@ -21,7 +20,13 @@ export default function Projects() {
 
   useEffect(() => {
     const next = allImages.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-    setResources(prev => [...prev, ...next]);
+
+    setResources(prev => {
+      const newIds = new Set(prev.map(item => item.id));
+      const filteredNext = next.filter(item => !newIds.has(item.id));
+      return [...prev, ...filteredNext];
+    });
+
     if (page * PAGE_SIZE >= allImages.length) setHasMore(false);
   }, [page]);
 
@@ -30,7 +35,7 @@ export default function Projects() {
   });
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="projects">
       <h2 className={styles.title}>Proyectos</h2>
       <div className={styles.galleryGrid}>
         {resources.map((res, i) => (

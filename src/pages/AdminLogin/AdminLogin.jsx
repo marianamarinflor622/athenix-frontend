@@ -27,41 +27,47 @@ export default function AdminLogin() {
       await adminLogin(safeUser, safePass);
       navigate('/marianapa');
     } catch {
-      setError('Credenciales inválidas');
+      setError('Credenciales inválidas. Inténtalo de nuevo.');
     }
   };
 
   return (
     <div className={styles.container}>
-      <form className={styles.form} onSubmit={handleSubmit} autoComplete="off">
-        <h2 className={styles.title}>Acceso Administradora</h2>
+      <div className={styles.card}>
+        <form className={styles.form} onSubmit={handleSubmit} autoComplete="off">
+          <h2 className={styles.title}>Acceso Administradora</h2>
 
-        <input
-          type="text"
-          placeholder="Usuario"
-          value={user}
-          onChange={(e) => setUser(e.target.value)}
-          className={styles.input}
-          autoComplete="off"
-          required
-        />
+          <input
+            type="text"
+            aria-label="Usuario"
+            placeholder="Usuario"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+            className={styles.input}
+            autoComplete="off"
+            required
+            minLength={3}
+          />
 
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={pass}
-          onChange={(e) => setPass(e.target.value)}
-          className={styles.input}
-          autoComplete="new-password"
-          required
-        />
+          <input
+            type="password"
+            aria-label="Contraseña"
+            placeholder="Contraseña"
+            value={pass}
+            onChange={(e) => setPass(e.target.value)}
+            className={styles.input}
+            autoComplete="new-password"
+            required
+            minLength={6}
+          />
 
-        {error && <p className={styles.error}>{error}</p>}
+          {error && <p className={styles.error}>{error}</p>}
 
-        <button type="submit" className={styles.button}>
-          Entrar
-        </button>
-      </form>
+          <button type="submit" className={styles.button}>
+            Entrar
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

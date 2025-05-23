@@ -1,7 +1,7 @@
 .container {
     min-height: 100vh;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-bg); /* negro elegante */
+    color: var(--color-text-light);
     padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
@@ -10,40 +10,62 @@
   
   .title {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
   }
   
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     width: 100%;
     max-width: 1200px;
   }
   
   .card {
-    background-color: var(--color-4);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: #1A1A1A;
+    border: 1px solid rgba(183, 110, 121, 0.2); /* borde rose gold sutil */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
   }
   
   .number {
-    font-size: 2rem;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.25rem;
     font-weight: bold;
-    color: var(--color-1);
+    margin-bottom: 1rem;
   }
   
   .cardTitle {
-    margin-top: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-pale);
   }
   
   .list {
-    margin-top: 0.5rem;
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+    padding-left: 1rem;
   }
   
   .list li {
-    margin-left: 1rem;
-    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    list-style: disc;
   }
+  
