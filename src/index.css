@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexie+Readable&display=swap');
 
 :root {
-  /* Nueva paleta pastel */
-  --color-1: #8998DD;
-  --color-2: #8EC3D9;
-  --color-3: #B7E3CE;
-  --color-4: #D7F4E4;
-  --color-5: #FAD5E3;
-  --color-6: #E8C1E8;
+  /* Paleta Rose Tech Elegance */
+  --color-bg: #000;              /* Fondo negro profundo */
+  --color-accent: #B76E79;          /* Rose Gold */
+  --color-pale: #F4E4E1;            /* Rosa palo suave */
+  --color-text-light: #DAD0CC;      /* Champán grisáceo para textos */
+  --color-hover: #8C4E53;           /* Cobre quemado (hover) */
+  --color-soft-bg: #EEE9E6;         /* Gris mármol cálido (fondo tarjetas) */
 
   /* Tipografía */
-  --font-primary: 'Lexie Readable', cursive;
+  --font-primary: 'Lexie Readable', sans-serif;
 }
 
 /* Reset */
@@ -22,8 +22,8 @@
 
 body {
   font-family: var(--font-primary);
-  background-color: #fff; /* fondos de sección serán blanco o negro según módulo */
-  color: #000;            /* texto negro en fondos claros */
+  background-color: var(--color-bg);
+  color: var(--color-text-light);
 }
 
 /* Scroll suave para anclas */

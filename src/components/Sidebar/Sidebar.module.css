@@ -10,6 +10,27 @@
   padding: 1rem;
   font-family: var(--font-primary);
   overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.toggleButton {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--color-4);
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .sidebar a {
@@ -23,7 +44,7 @@
   color: var(--color-2);
 }
 
-.sidebar .active {
+.active {
   font-weight: bold;
   color: var(--color-3);
 }
