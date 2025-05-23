@@ -4,6 +4,14 @@ import styles from './Sidebar.module.css';
 export default function Sidebar({ items, activeId }) {
   const [open, setOpen] = useState(false);
 
+  const handleLinkClick = (id) => {
+    setOpen(false);
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <>
       <button
@@ -11,19 +19,18 @@ export default function Sidebar({ items, activeId }) {
         onClick={() => setOpen(!open)}
         aria-label="Menú de navegación"
       >
-        ☰
+        {open ? '✖' : '☰'}
       </button>
 
       <nav className={`${styles.sidebar} ${open ? styles.open : ''}`}>
         {items.map(({ id, title }) => (
-          <a
+          <button
             key={id}
-            href={`#${id}`}
-            className={activeId === id ? styles.active : ''}
-            onClick={() => setOpen(false)}
+            className={`${styles.link} ${activeId === id ? styles.active : ''}`}
+            onClick={() => handleLinkClick(id)}
           >
             {title}
-          </a>
+          </button>
         ))}
       </nav>
     </>
