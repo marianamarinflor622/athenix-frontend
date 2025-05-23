@@ -36,9 +36,14 @@
     background-color: var(--color-5);
   }
   
+  
   .text {
     max-width: 800px;
-    font-size: 1rem;
-    line-height: 1.6;
-    text-align: center;
+    font-size: 1.2rem;            /* ~19.2px, accesible */
+    line-height: 1.8;             /* más respirable */
+    text-align:inherit;
+    padding: 0 1rem;              /* margen lateral en móviles */
+    color: var(--color-text-light);
+    margin: 0 auto;
   }
+  

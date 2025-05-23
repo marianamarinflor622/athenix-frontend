@@ -24,8 +24,12 @@ export default function AboutUs() {
         </button>
       </div>
       <p className={styles.text}>
-        En Athenyx somos un equipo multidisciplinar de diseñadores y desarrolladores comprometidos con la inclusión digital. Fusionamos creatividad y tecnología para crear experiencias accesibles y adaptadas.
-      </p>
+  En <span className={styles.brand}>Athenyx</span>, somos un equipo multidisciplinario de diseñadores y desarrolladores
+  comprometidos con la inclusión digital.  
+  <br /><br />
+  Fusionamos creatividad y tecnología para construir experiencias accesibles, elegantes y adaptadas a las necesidades
+  de todas las personas.
+</p>
     </div>
   );
 }
